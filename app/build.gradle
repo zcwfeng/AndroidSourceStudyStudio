@@ -42,6 +42,7 @@ apt {
 dependencies {
     apt "org.androidannotations:androidannotations:$AAVersion"
     compile "org.androidannotations:androidannotations-api:$AAVersion"
+    compile 'com.facebook.fresco:fresco:0.5.3+'
 }
 
 apt {
