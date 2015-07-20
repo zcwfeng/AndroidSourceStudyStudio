@@ -1,4 +1,4 @@
-package com.zcwfeng.sourcestudy.androidsourcestudystudio;
+package com.zcwfeng.sourcestudy.androidsourcestudystudio.activity;
 
 import android.content.Intent;
 import android.net.Uri;
@@ -15,6 +15,7 @@ import com.facebook.drawee.controller.BaseControllerListener;
 import com.facebook.drawee.controller.ControllerListener;
 import com.facebook.drawee.interfaces.DraweeController;
 import com.facebook.drawee.view.SimpleDraweeView;
+import com.zcwfeng.sourcestudy.androidsourcestudystudio.R;
 
 import org.androidannotations.annotations.AfterViews;
 import org.androidannotations.annotations.Background;
@@ -30,6 +31,8 @@ public class MainActivity extends AppCompatActivity {
 
     @ViewById(R.id.test_stick_nav_layout)
     Button mBtn;
+    @ViewById
+    Button mEventBusBtn;
 
     @ViewById(R.id.my_image_view)
     SimpleDraweeView draweeView;
@@ -83,6 +86,12 @@ public class MainActivity extends AppCompatActivity {
     @Click(R.id.test_stick_nav_layout)
     public void mBtnClick() {
         Intent intent = new Intent(this, com.zcwfeng.sourcestudy.androidsourcestudystudio.stickynavlayout.StickNavLayoutMainActivity.class);
+        startActivity(intent);
+    }
+
+    @Click(R.id.mEventBusBtn)
+    public void clickEventBusTest(){
+        Intent intent = new Intent(MainActivity.this,EventBusActivity.class);
         startActivity(intent);
     }
 
