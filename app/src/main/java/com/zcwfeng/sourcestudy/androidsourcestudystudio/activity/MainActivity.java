@@ -16,6 +16,7 @@ import com.facebook.drawee.controller.ControllerListener;
 import com.facebook.drawee.interfaces.DraweeController;
 import com.facebook.drawee.view.SimpleDraweeView;
 import com.zcwfeng.sourcestudy.androidsourcestudystudio.R;
+import com.zcwfeng.sourcestudy.androidsourcestudystudio.recycleviews.RecycleMainActivity;
 
 import org.androidannotations.annotations.AfterViews;
 import org.androidannotations.annotations.Background;
@@ -36,6 +37,9 @@ public class MainActivity extends AppCompatActivity {
 
     @ViewById(R.id.my_image_view)
     SimpleDraweeView draweeView;
+
+    @ViewById(R.id.mRecycleView)
+    Button mRecycleView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -92,6 +96,12 @@ public class MainActivity extends AppCompatActivity {
     @Click(R.id.mEventBusBtn)
     public void clickEventBusTest(){
         Intent intent = new Intent(MainActivity.this,EventBusActivity.class);
+        startActivity(intent);
+    }
+
+    @Click(R.id.mRecycleView)
+    public void testRecycleView(){
+        Intent intent = new Intent(MainActivity.this,RecycleMainActivity.class);
         startActivity(intent);
     }
 

@@ -18,14 +18,18 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
+
 }
 
 dependencies {
-    compile fileTree(include: ['*.jar'], dir: 'libs,common-libs')
-    compile 'com.android.support:appcompat-v7:22.2.0'
-//    compile 'com.android.support:support-annotations:22.2.0'
     apt "org.androidannotations:androidannotations:$AAVersion"
+    compile fileTree(include: ['*.jar'], dir: 'libs')
     compile "org.androidannotations:androidannotations-api:$AAVersion"
+    compile 'com.facebook.fresco:fresco:0.5.3+'
+    compile 'com.android.support:recyclerview-v7:21.+'
+    compile 'com.android.support:palette-v7:21.+'
+    compile 'com.android.support:appcompat-v7:22.2.0'
+    compile project(':library')
 }
 
 apt {
@@ -39,15 +43,5 @@ apt {
 
 
 
-dependencies {
-    apt "org.androidannotations:androidannotations:$AAVersion"
-    compile "org.androidannotations:androidannotations-api:$AAVersion"
-    compile 'com.facebook.fresco:fresco:0.5.3+'
-}
 
-apt {
-    arguments {
-        androidManifestFile variant.outputs[0].processResources.manifestFile
-    }
-}
 
