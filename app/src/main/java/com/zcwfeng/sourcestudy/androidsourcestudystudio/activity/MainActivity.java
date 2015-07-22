@@ -21,7 +21,11 @@ import com.facebook.drawee.controller.ControllerListener;
 import com.facebook.drawee.interfaces.DraweeController;
 import com.facebook.drawee.view.SimpleDraweeView;
 import com.zcwfeng.sourcestudy.androidsourcestudystudio.R;
+<<<<<<< HEAD
 import com.zcwfeng.sourcestudy.androidsourcestudystudio.mprogressbar.RubberIndicator;
+=======
+import com.zcwfeng.sourcestudy.androidsourcestudystudio.recycleviews.RecycleMainActivity;
+>>>>>>> 368628ec2ab829b06c08e8d59bce3d6498150dc5
 
 import org.androidannotations.annotations.AfterViews;
 import org.androidannotations.annotations.Background;
@@ -47,10 +51,15 @@ public class MainActivity extends AppCompatActivity implements RubberIndicator.O
     @ViewById(R.id.my_image_view)
     SimpleDraweeView draweeView;
 
+<<<<<<< HEAD
     private GestureDetectorCompat mDetector;
     private static final int SWIPE_MIN_DISTANCE = 120;
     private static final int SWIPE_MAX_OFF_PATH = 250;
     private static final int SWIPE_THRESHOLD_VELOCITY = 200;
+=======
+    @ViewById(R.id.mRecycleView)
+    Button mRecycleView;
+>>>>>>> 368628ec2ab829b06c08e8d59bce3d6498150dc5
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -97,6 +106,7 @@ public class MainActivity extends AppCompatActivity implements RubberIndicator.O
         startActivity(intent);
     }
 
+<<<<<<< HEAD
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
@@ -157,6 +167,12 @@ public class MainActivity extends AppCompatActivity implements RubberIndicator.O
         public boolean onDown(MotionEvent e) {
             return true;
         }
+=======
+    @Click(R.id.mRecycleView)
+    public void testRecycleView(){
+        Intent intent = new Intent(MainActivity.this,RecycleMainActivity.class);
+        startActivity(intent);
+>>>>>>> 368628ec2ab829b06c08e8d59bce3d6498150dc5
     }
 
 }

@@ -22,6 +22,7 @@
 
         <activity android:name="com.zcwfeng.sourcestudy.androidsourcestudystudio.activity.EventBusActivity_"></activity>
         <activity android:name="com.zcwfeng.sourcestudy.androidsourcestudystudio.activity.EventBusActivityReceive_"></activity>
+        <activity android:name="com.zcwfeng.sourcestudy.androidsourcestudystudio.recycleviews.RecycleMainActivity"></activity>
 
         <activity android:name="com.zcwfeng.sourcestudy.androidsourcestudystudio.activity.EventBusActivityReceive2"></activity>
 
