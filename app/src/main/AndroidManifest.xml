@@ -25,7 +25,9 @@
         <activity android:name="com.zcwfeng.sourcestudy.androidsourcestudystudio.recycleviews.RecycleMainActivity"></activity>
 
         <activity android:name="com.zcwfeng.sourcestudy.androidsourcestudystudio.activity.EventBusActivityReceive2"></activity>
-
+        <activity android:name="com.zcwfeng.sourcestudy.androidsourcestudystudio.fresco.FrescoDemoActivity"></activity>
+        <activity android:name="com.zcwfeng.sourcestudy.androidsourcestudystudio.mprogressbar.ProgressBarActivity_"></activity>
+        <activity android:name="com.zcwfeng.sourcestudy.androidsourcestudystudio.recycleviews.waterfalldemo.WaterFlallMainActivity"></activity>
     </application>
 
 </manifest>
