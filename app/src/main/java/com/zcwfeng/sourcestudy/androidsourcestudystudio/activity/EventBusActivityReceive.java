@@ -6,10 +6,10 @@ import android.util.Log;
 import android.widget.TextView;
 
 import com.zcwfeng.sourcestudy.androidsourcestudystudio.R;
+import com.zcwfeng.sourcestudy.androidsourcestudystudio.event.CommonEvents;
 import com.zcwfeng.sourcestudy.androidsourcestudystudio.event.EventBus;
 import com.zcwfeng.sourcestudy.androidsourcestudystudio.event.EventBusFlag;
 
-import org.androidannotations.annotations.Click;
 import org.androidannotations.annotations.EActivity;
 import org.androidannotations.annotations.ViewById;
 //http://plugins.jetbrains.com/plugin/7369
@@ -28,17 +28,17 @@ public class EventBusActivityReceive extends AppCompatActivity {
     }
 
 
-    public void onEventMainThread(EventBusFlag event) {
+    public void onEventMainThread(CommonEvents event) {
         mTv.setText("event bus 事件总线接受成功");
     }
 
-    public void onEvent(EventBusFlag event){
-        Log.e("zcw","zcw-event-bus");
-    }
+
 
     @Override
     protected void onDestroy() {
         super.onDestroy();
         EventBus.getDefault().unregister(this);
     }
+
+
 }

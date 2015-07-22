@@ -14,7 +14,7 @@
        android:layout_width="match_parent"
        android:textSize="18sp"
        android:textStyle="bold"
-       tools:text="eventbus"
+       android:text="eventbus"
        android:textColor="@android:color/holo_red_dark"
        android:layout_height="wrap_content" />
 
