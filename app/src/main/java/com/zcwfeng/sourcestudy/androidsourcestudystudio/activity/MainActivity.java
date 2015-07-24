@@ -6,13 +6,16 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.MenuItem;
 import android.widget.Button;
+import android.widget.LinearLayout;
 
 import com.facebook.drawee.backends.pipeline.Fresco;
 import com.facebook.drawee.controller.BaseControllerListener;
 import com.facebook.drawee.controller.ControllerListener;
 import com.facebook.drawee.interfaces.DraweeController;
 import com.facebook.drawee.view.SimpleDraweeView;
+import com.zcwfeng.sourcestudy.androidsourcestudystudio.MyApplication;
 import com.zcwfeng.sourcestudy.androidsourcestudystudio.R;
+import com.zcwfeng.sourcestudy.androidsourcestudystudio.basic.BaseActivity;
 import com.zcwfeng.sourcestudy.androidsourcestudystudio.fresco.FrescoDemoActivity;
 import com.zcwfeng.sourcestudy.androidsourcestudystudio.mprogressbar.ProgressBarActivity_;
 import com.zcwfeng.sourcestudy.androidsourcestudystudio.recycleviews.RecycleMainActivity;
@@ -25,7 +28,7 @@ import org.androidannotations.annotations.ViewById;
 //http://plugins.jetbrains.com/plugin/7369
 
 @EActivity(R.layout.activity_main)
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends BaseActivity {
     @ViewById(R.id.test_stick_nav_layout)
     Button mBtn;
     @ViewById
@@ -38,10 +41,12 @@ public class MainActivity extends AppCompatActivity {
     Button mFrescoView;
     @ViewById(R.id.mProgressBar)
     Button mProgressBar;
+    long exitTime;//点击返回时间
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        MyApplication.getInstance().notifyCloseMe();
     }
 
     @AfterViews
@@ -95,5 +100,21 @@ public class MainActivity extends AppCompatActivity {
     public void testProgressBarView() {
         Intent intent = new Intent(MainActivity.this, ProgressBarActivity_.class);
         startActivity(intent);
+    }
+
+
+    @Override
+    public void onBackPressed() {
+        //2次点击返回退出
+        if ((System.currentTimeMillis() - exitTime) > 2000) {
+            MyApplication.getInstance().showLongToast(R.string.exit_tips);
+            exitTime = System.currentTimeMillis();
+        } else {
+            Intent intent = new Intent(this, FirstActivity.class);
+            intent.setAction("finish");
+            intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+            startActivity(intent);
+            finish();
+        }
     }
 }

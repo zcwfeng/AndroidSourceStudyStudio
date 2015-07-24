@@ -8,6 +8,7 @@ import android.util.Log;
 import android.widget.Button;
 
 import com.zcwfeng.sourcestudy.androidsourcestudystudio.R;
+import com.zcwfeng.sourcestudy.androidsourcestudystudio.basic.BaseActivity;
 import com.zcwfeng.sourcestudy.androidsourcestudystudio.event.CommonEvents;
 import com.zcwfeng.sourcestudy.androidsourcestudystudio.event.EventBus;
 import com.zcwfeng.sourcestudy.androidsourcestudystudio.event.EventBusFlag;
@@ -20,7 +21,7 @@ import java.util.concurrent.TimeUnit;
 //http://plugins.jetbrains.com/plugin/7369
 
 @EActivity(R.layout.eventbus_main)
-public class EventBusActivity extends Activity {
+public class EventBusActivity extends BaseActivity {
 
     @ViewById(R.id.test_event_bus)
     Button mBtn;

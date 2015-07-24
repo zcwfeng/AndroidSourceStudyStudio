@@ -9,7 +9,7 @@
         android:name=".MyApplication"
         android:theme="@style/AppTheme" >
         <activity
-            android:name="com.zcwfeng.sourcestudy.androidsourcestudystudio.activity.MainActivity_"
+            android:name="com.zcwfeng.sourcestudy.androidsourcestudystudio.activity.FirstActivity"
             android:label="@string/app_name" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -17,6 +17,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <activity android:name="com.zcwfeng.sourcestudy.androidsourcestudystudio.activity.SplashScreenActivity_"></activity>
 
         <activity android:name="com.zcwfeng.sourcestudy.androidsourcestudystudio.stickynavlayout.StickNavLayoutMainActivity"></activity>
 
@@ -28,6 +30,8 @@
         <activity android:name="com.zcwfeng.sourcestudy.androidsourcestudystudio.fresco.FrescoDemoActivity"></activity>
         <activity android:name="com.zcwfeng.sourcestudy.androidsourcestudystudio.mprogressbar.ProgressBarActivity_"></activity>
         <activity android:name="com.zcwfeng.sourcestudy.androidsourcestudystudio.recycleviews.waterfalldemo.WaterFlallMainActivity"></activity>
+        <activity android:name="com.zcwfeng.sourcestudy.androidsourcestudystudio.activity.MainActivity_"></activity>
+
     </application>
 
 </manifest>

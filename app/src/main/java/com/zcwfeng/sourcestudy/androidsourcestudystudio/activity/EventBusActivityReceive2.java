@@ -7,6 +7,7 @@ import android.util.Log;
 import android.widget.TextView;
 
 import com.zcwfeng.sourcestudy.androidsourcestudystudio.R;
+import com.zcwfeng.sourcestudy.androidsourcestudystudio.basic.BaseActivity;
 import com.zcwfeng.sourcestudy.androidsourcestudystudio.event.CommonEvents;
 import com.zcwfeng.sourcestudy.androidsourcestudystudio.event.EventBus;
 import com.zcwfeng.sourcestudy.androidsourcestudystudio.event.EventBusFlag;
@@ -15,7 +16,7 @@ import org.androidannotations.annotations.EActivity;
 import org.androidannotations.annotations.ViewById;
 //http://plugins.jetbrains.com/plugin/7369
 
-public class EventBusActivityReceive2 extends Activity {
+public class EventBusActivityReceive2 extends BaseActivity {
 
 
     TextView mTv;

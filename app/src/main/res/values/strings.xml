@@ -9,4 +9,6 @@
     <string name="action_move_to_right">==&gt;</string>
     <string name="action_move_to_left">&lt;==</string>
     <string name="usage">Swipe the screen</string>
+    <string name="exit_tips">再按一次退出程序</string>
+
 </resources>
