@@ -7,6 +7,7 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.ViewGroup;
 
+import java.lang.reflect.Array;
 import java.util.ArrayList;
 import android.view.View;
 import android.widget.TextView;
@@ -28,6 +29,12 @@ public class MSimpleAdapter extends RecyclerView.Adapter<MSimpleAdapter.ViewHold
     public MSimpleAdapter(ArrayList<String> mDatas, Context context) {
         this.mDatas = mDatas;
         mInflater = LayoutInflater.from(context);
+    }
+
+
+    public void updateDatas(ArrayList mDatas){
+        this.mDatas = mDatas;
+        notifyDataSetChanged();
     }
 
     @Override
