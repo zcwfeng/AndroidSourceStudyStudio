@@ -5,6 +5,7 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.Button;
 import android.widget.LinearLayout;
 
@@ -19,12 +20,18 @@ import com.zcwfeng.sourcestudy.androidsourcestudystudio.basic.BaseActivity;
 import com.zcwfeng.sourcestudy.androidsourcestudystudio.fresco.FrescoDemoActivity;
 import com.zcwfeng.sourcestudy.androidsourcestudystudio.mprogressbar.ProgressBarActivity_;
 import com.zcwfeng.sourcestudy.androidsourcestudystudio.recycleviews.RecycleMainActivity;
+import com.zcwfeng.sourcestudy.androidsourcestudystudio.recycleviews.recylerlistview.RecyclerViewTestActivity;
 import com.zcwfeng.sourcestudy.androidsourcestudystudio.recycleviews.waterfalldemo.WaterFlallMainActivity;
+import com.zcwfeng.sourcestudy.androidsourcestudystudio.rongcloud.MessageActivity;
 
+import org.androidannotations.annotations.AfterInject;
 import org.androidannotations.annotations.AfterViews;
 import org.androidannotations.annotations.Click;
 import org.androidannotations.annotations.EActivity;
 import org.androidannotations.annotations.ViewById;
+
+import roboguice.inject.InjectView;
+
 //http://plugins.jetbrains.com/plugin/7369
 
 @EActivity(R.layout.activity_main)
@@ -42,11 +49,14 @@ public class MainActivity extends BaseActivity {
     @ViewById(R.id.mProgressBar)
     Button mProgressBar;
     long exitTime;//点击返回时间
+    @ViewById
+    Button mMessage;//RongYun
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         MyApplication.getInstance().notifyCloseMe();
+
     }
 
     @AfterViews
@@ -61,7 +71,10 @@ public class MainActivity extends BaseActivity {
                 .setControllerListener(listener)
                 .build();
         draweeView.setController(controller);
+
+
     }
+
 
     @Click(R.id.test_stick_nav_layout)
     public void mBtnClick() {
@@ -73,6 +86,13 @@ public class MainActivity extends BaseActivity {
     public void clickEventBusTest() {
         Intent intent = new Intent(MainActivity.this, EventBusActivity_.class);
         startActivity(intent);
+    }
+
+    @Click(R.id.mInjectView)
+    public void clickRoboGuiceTest(){
+        MyApplication.getInstance().showLongToast("还没研究明白InjectView");
+//        Intent intent = new Intent(MainActivity.this, RoboDemoActivity.class);
+//        startActivity(intent);
     }
 
     @Override
@@ -90,6 +110,13 @@ public class MainActivity extends BaseActivity {
         startActivity(intent);
     }
 
+    @Click(R.id.my_recyler_listview)
+    public void testRecylerViewListView(){
+
+        Intent intent = new Intent(MainActivity.this, RecyclerViewTestActivity.class);
+        startActivity(intent);
+    }
+
     @Click(R.id.mFresco)
     public void testFrescoView() {
         Intent intent = new Intent(MainActivity.this, FrescoDemoActivity.class);
@@ -102,6 +129,11 @@ public class MainActivity extends BaseActivity {
         startActivity(intent);
     }
 
+    @Click(R.id.mMessage)
+    public void testRontYunMessage(){
+        Intent intent = new Intent(MainActivity.this, MessageActivity.class);
+        startActivity(intent);
+    }
 
     @Override
     public void onBackPressed() {

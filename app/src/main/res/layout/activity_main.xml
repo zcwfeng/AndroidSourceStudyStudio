@@ -3,11 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-   android:orientation="vertical">
-
-
-
-
+    android:orientation="vertical">
 
 
     <Button
@@ -22,6 +18,13 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="eventbus_test" />
+
+    <Button
+        android:id="@+id/mInjectView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#44ff0000"
+        android:text="InjectView" />
 
     <com.facebook.drawee.view.SimpleDraweeView
         android:id="@+id/my_image_view"
@@ -39,25 +42,37 @@
 
     <Button
         android:id="@+id/mRecycleView"
-        android:text="recycle view"
         android:layout_width="match_parent"
         android:layout_height="40dp"
-         />
+        android:text="recycle view" />
 
 
     <Button
         android:id="@+id/mFresco"
-        android:text="fresco view"
         android:layout_width="match_parent"
         android:layout_height="40dp"
-        />
+        android:text="fresco view" />
 
     <Button
         android:id="@+id/mProgressBar"
-        android:text="ProgressBar Activity"
         android:layout_width="match_parent"
         android:layout_height="40dp"
-        />
+        android:text="ProgressBar Activity" />
+
+
+    <Button
+        android:id="@+id/mMessage"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:text="融云消息集成" />
+
+
+    <Button
+       android:id="@+id/my_recyler_listview"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:text="RecyclerView ListView"/>
+
 
 
 </LinearLayout>

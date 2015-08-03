@@ -18,19 +18,23 @@
             </intent-filter>
         </activity>
 
+        <!-- 注解Activity -->
         <activity android:name="com.zcwfeng.sourcestudy.androidsourcestudystudio.activity.SplashScreenActivity_"></activity>
-
-        <activity android:name="com.zcwfeng.sourcestudy.androidsourcestudystudio.stickynavlayout.StickNavLayoutMainActivity"></activity>
-
         <activity android:name="com.zcwfeng.sourcestudy.androidsourcestudystudio.activity.EventBusActivity_"></activity>
-        <activity android:name="com.zcwfeng.sourcestudy.androidsourcestudystudio.activity.EventBusActivityReceive_"></activity>
-        <activity android:name="com.zcwfeng.sourcestudy.androidsourcestudystudio.recycleviews.RecycleMainActivity"></activity>
+        <activity android:name="com.zcwfeng.sourcestudy.androidsourcestudystudio.mprogressbar.ProgressBarActivity_"></activity>
+        <activity android:name="com.zcwfeng.sourcestudy.androidsourcestudystudio.activity.MainActivity_"></activity>
+        <activity android:name="com.zcwfeng.sourcestudy.androidsourcestudystudio.activity.GuideActivity_"></activity>
+        <activity android:name="com.zcwfeng.sourcestudy.androidsourcestudystudio.rongcloud.MessageActivity_"></activity>
 
+        <!-- 非注解的Activity -->
+        <activity android:name="com.zcwfeng.sourcestudy.androidsourcestudystudio.stickynavlayout.StickNavLayoutMainActivity"></activity>
+        <activity android:name="com.zcwfeng.sourcestudy.androidsourcestudystudio.recycleviews.waterfalldemo.WaterFlallMainActivity"></activity>
         <activity android:name="com.zcwfeng.sourcestudy.androidsourcestudystudio.activity.EventBusActivityReceive2"></activity>
         <activity android:name="com.zcwfeng.sourcestudy.androidsourcestudystudio.fresco.FrescoDemoActivity"></activity>
-        <activity android:name="com.zcwfeng.sourcestudy.androidsourcestudystudio.mprogressbar.ProgressBarActivity_"></activity>
-        <activity android:name="com.zcwfeng.sourcestudy.androidsourcestudystudio.recycleviews.waterfalldemo.WaterFlallMainActivity"></activity>
-        <activity android:name="com.zcwfeng.sourcestudy.androidsourcestudystudio.activity.MainActivity_"></activity>
+        <activity android:name="com.zcwfeng.sourcestudy.androidsourcestudystudio.activity.EventBusActivityReceive_"></activity>
+        <activity android:name="com.zcwfeng.sourcestudy.androidsourcestudystudio.recycleviews.RecycleMainActivity"></activity>
+        <activity android:name="com.zcwfeng.sourcestudy.androidsourcestudystudio.recycleviews.recylerlistview.RecyclerViewTestActivity"></activity>
+
 
     </application>
 

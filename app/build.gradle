@@ -33,6 +33,7 @@ dependencies {
     compile 'com.github.erd:android-volley:1.0.0'
     compile project(':library')
     compile project(':mylibrary')
+    compile project(':IMKit')
 }
 
 apt {

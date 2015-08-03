@@ -10,6 +10,9 @@ import com.zcwfeng.sourcestudy.androidsourcestudystudio.basic.CloseMe;
 
 import java.util.ArrayList;
 
+import io.rong.imkit.RongIM;
+
+
 /**
  * Created by 11111 on 2015/7/9.
  */
@@ -36,6 +39,9 @@ public class MyApplication extends Application {
         requestQueue = Volley.newRequestQueue(this);
         // 初始化fresco库
         Fresco.initialize(this);
+
+//        RongIM.init(this);
+
     }
 
     public void notifyCloseMe() {

@@ -3,12 +3,10 @@ package com.zcwfeng.sourcestudy.androidsourcestudystudio.activity;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.widget.Button;
 
 import com.zcwfeng.sourcestudy.androidsourcestudystudio.R;
-import com.zcwfeng.sourcestudy.androidsourcestudystudio.basic.BaseActivity;
 import com.zcwfeng.sourcestudy.androidsourcestudystudio.event.CommonEvents;
 import com.zcwfeng.sourcestudy.androidsourcestudystudio.event.EventBus;
 import com.zcwfeng.sourcestudy.androidsourcestudystudio.event.EventBusFlag;
@@ -21,13 +19,12 @@ import java.util.concurrent.TimeUnit;
 //http://plugins.jetbrains.com/plugin/7369
 
 @EActivity(R.layout.eventbus_main)
-public class EventBusActivity extends BaseActivity {
+public class EventBusActivity extends Activity {
 
     @ViewById(R.id.test_event_bus)
     Button mBtn;
     @ViewById(R.id.test_event_bus_2)
     Button mBtn2;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
