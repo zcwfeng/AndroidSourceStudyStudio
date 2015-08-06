@@ -32,6 +32,16 @@ public class MSimpleAdapter extends RecyclerView.Adapter<MSimpleAdapter.ViewHold
     }
 
 
+    public void updateInsertDatas(ArrayList mDatas,int pos){
+        this.mDatas = mDatas;
+        notifyItemInserted(0);
+    }
+
+    public void updateDelDatas(ArrayList mDatas,int pos){
+        this.mDatas = mDatas;
+        notifyItemRemoved(pos);
+    }
+
     public void updateDatas(ArrayList mDatas){
         this.mDatas = mDatas;
         notifyDataSetChanged();
