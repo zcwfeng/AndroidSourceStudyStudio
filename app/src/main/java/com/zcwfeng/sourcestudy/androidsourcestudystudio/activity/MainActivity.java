@@ -17,6 +17,7 @@ import com.facebook.drawee.view.SimpleDraweeView;
 import com.zcwfeng.sourcestudy.androidsourcestudystudio.MyApplication;
 import com.zcwfeng.sourcestudy.androidsourcestudystudio.R;
 import com.zcwfeng.sourcestudy.androidsourcestudystudio.basic.BaseActivity;
+import com.zcwfeng.sourcestudy.androidsourcestudystudio.drawerlayout.DrawerLayoutDemo;
 import com.zcwfeng.sourcestudy.androidsourcestudystudio.fresco.FrescoDemoActivity;
 import com.zcwfeng.sourcestudy.androidsourcestudystudio.mprogressbar.ProgressBarActivity_;
 import com.zcwfeng.sourcestudy.androidsourcestudystudio.recycleviews.RecycleMainActivity;
@@ -135,6 +136,11 @@ public class MainActivity extends BaseActivity {
         startActivity(intent);
     }
 
+    @Click({R.id.drawer_demo})
+    public void testClicks(){
+        Intent intent = new Intent(MainActivity.this, DrawerLayoutDemo.class);
+        startActivity(intent);
+    }
     @Override
     public void onBackPressed() {
         //2次点击返回退出

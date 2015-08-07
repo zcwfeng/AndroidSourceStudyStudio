@@ -1,16 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.zcwfeng.sourcestudy.androidsourcestudystudio" >
-    <uses-permission android:name="android.permission.INTERNET"/>
+    package="com.zcwfeng.sourcestudy.androidsourcestudystudio">
+
+    <uses-permission android:name="android.permission.INTERNET" />
     <application
+        android:name=".MyApplication"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
-        android:name=".MyApplication"
-        android:theme="@style/AppTheme" >
+        android:theme="@style/AppTheme">
         <activity
             android:name="com.zcwfeng.sourcestudy.androidsourcestudystudio.activity.FirstActivity"
-            android:label="@string/app_name" >
+            android:label="@string/app_name">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -34,8 +35,9 @@
         <activity android:name="com.zcwfeng.sourcestudy.androidsourcestudystudio.activity.EventBusActivityReceive_"></activity>
         <activity android:name="com.zcwfeng.sourcestudy.androidsourcestudystudio.recycleviews.RecycleMainActivity"></activity>
         <activity android:name="com.zcwfeng.sourcestudy.androidsourcestudystudio.recycleviews.recylerlistview.RecyclerViewTestActivity"></activity>
-
-
+        <activity
+            android:name="com.zcwfeng.sourcestudy.androidsourcestudystudio.drawerlayout.DrawerLayoutDemo"
+            android:theme="@style/AppTheme3"></activity>
     </application>
 
 </manifest>
