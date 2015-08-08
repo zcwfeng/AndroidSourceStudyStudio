@@ -29,7 +29,11 @@ dependencies {
     compile 'com.android.support:recyclerview-v7:21.+'
     compile 'com.android.support:palette-v7:21.+'
     compile 'com.android.support:appcompat-v7:22.2.0'
+    compile 'com.google.code.gson:gson:2.3'
+    compile 'com.github.erd:android-volley:1.0.0'
     compile project(':library')
+    compile project(':mylibrary')
+    compile project(':IMKit')
 }
 
 apt {

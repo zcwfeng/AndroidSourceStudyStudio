@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:background="#44ff0000"
+    android:gravity="center"
+    android:layout_height="50dp">
+
+    <TextView
+        android:gravity="center"
+        android:id="@+id/s"
+        android:text="A"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+</LinearLayout>

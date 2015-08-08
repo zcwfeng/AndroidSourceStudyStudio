@@ -1,0 +1,63 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:text="fresco pic"
+        android:textColor="#000000"
+        android:textSize="20sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/title"
+        android:background="#649FEF"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:id="@+id/frsco_img1"
+            android:layout_width="200dp"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            fresco:roundBottomLeft="false"
+            fresco:roundBottomRight="false"
+            fresco:roundWithOverlayColor="#333333"
+            fresco:roundedCornerRadius="5dp"
+            fresco:roundingBorderColor="#222222"
+            fresco:roundingBorderWidth="1dp" />
+
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:id="@+id/frsco_img2"
+            android:layout_width="200dp"
+            android:layout_height="0dp"
+            android:layout_centerHorizontal="true"
+            android:layout_weight="1"
+            fresco:roundBottomLeft="false"
+            fresco:roundBottomRight="false"
+            fresco:roundWithOverlayColor="#333333"
+            fresco:roundedCornerRadius="5dp"
+            fresco:roundingBorderColor="#33CC5B"
+            fresco:roundingBorderWidth="10dp" />
+
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:id="@+id/frsco_img3"
+            android:layout_width="200dp"
+            android:layout_height="0dp"
+            android:layout_centerHorizontal="true"
+            android:layout_weight="1"
+            fresco:roundBottomLeft="false"
+            fresco:roundBottomRight="false"
+            fresco:roundWithOverlayColor="#F0E511"
+            fresco:roundedCornerRadius="5dp"
+            fresco:roundingBorderColor="#FC6853"
+            fresco:roundingBorderWidth="5dp" />
+    </LinearLayout>
+</RelativeLayout>
