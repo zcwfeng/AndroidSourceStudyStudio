@@ -141,6 +141,12 @@ public class MainActivity extends BaseActivity {
         Intent intent = new Intent(MainActivity.this, DrawerLayoutDemo.class);
         startActivity(intent);
     }
+
+    @Click(R.id.h5_demo)
+    public void goHtml5(){
+        Intent intent = new Intent(MainActivity.this, HTML5Main.class);
+        startActivity(intent);
+    }
     @Override
     public void onBackPressed() {
         //2次点击返回退出

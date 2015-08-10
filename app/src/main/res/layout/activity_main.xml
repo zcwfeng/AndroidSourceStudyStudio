@@ -1,85 +1,95 @@
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:fresco="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical">
+    android:layout_height="match_parent">
 
-
-    <Button
-        android:id="@+id/test_stick_nav_layout"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="test_stick_nav_layout" />
-
-
-    <Button
-        android:id="@+id/mEventBusBtn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="eventbus_test" />
-
-    <Button
-        android:id="@+id/mInjectView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textColor="#44ff0000"
-        android:text="InjectView" />
-
-    <com.facebook.drawee.view.SimpleDraweeView
-        android:id="@+id/my_image_view"
-        android:layout_width="130dp"
-        android:layout_height="130dp"
-        android:layout_below="@id/test_stick_nav_layout"
-        android:layout_marginTop="20dp"
-        fresco:placeholderImage="@mipmap/ic_launcher"
-        fresco:roundBottomLeft="false"
-        fresco:roundBottomRight="false"
-        fresco:roundWithOverlayColor="#0000ff"
-        fresco:roundedCornerRadius="5dp"
-        fresco:roundingBorderColor="#ff0000"
-        fresco:roundingBorderWidth="1dp" />
-
-    <Button
-        android:id="@+id/mRecycleView"
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="40dp"
-        android:text="recycle view" />
+        android:layout_height="match_parent"
+        android:orientation="vertical">
 
 
-    <Button
-        android:id="@+id/mFresco"
-        android:layout_width="match_parent"
-        android:layout_height="40dp"
-        android:text="fresco view" />
-
-    <Button
-        android:id="@+id/mProgressBar"
-        android:layout_width="match_parent"
-        android:layout_height="40dp"
-        android:text="ProgressBar Activity" />
+        <Button
+            android:id="@+id/test_stick_nav_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="test_stick_nav_layout" />
 
 
-    <Button
-        android:id="@+id/mMessage"
-        android:layout_width="match_parent"
-        android:layout_height="40dp"
-        android:text="融云消息集成" />
+        <Button
+            android:id="@+id/mEventBusBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="eventbus_test" />
+
+        <Button
+            android:id="@+id/mInjectView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="InjectView"
+            android:textColor="#44ff0000" />
+
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:id="@+id/my_image_view"
+            android:layout_width="130dp"
+            android:layout_height="130dp"
+            android:layout_below="@id/test_stick_nav_layout"
+            android:layout_marginTop="20dp"
+            fresco:placeholderImage="@mipmap/ic_launcher"
+            fresco:roundBottomLeft="false"
+            fresco:roundBottomRight="false"
+            fresco:roundWithOverlayColor="#0000ff"
+            fresco:roundedCornerRadius="5dp"
+            fresco:roundingBorderColor="#ff0000"
+            fresco:roundingBorderWidth="1dp" />
+
+        <Button
+            android:id="@+id/mRecycleView"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:text="recycle view" />
 
 
-    <Button
-       android:id="@+id/my_recyler_listview"
-        android:layout_width="match_parent"
-        android:layout_height="40dp"
-        android:text="RecyclerView ListView"/>
+        <Button
+            android:id="@+id/mFresco"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:text="fresco view" />
 
-    <Button
-        android:id="@+id/drawer_demo"
-        android:layout_width="match_parent"
-        android:layout_height="40dp"
-        android:text="drawer_demo"/>
-
-</LinearLayout>
+        <Button
+            android:id="@+id/mProgressBar"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:text="ProgressBar Activity" />
 
 
+        <Button
+            android:id="@+id/mMessage"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:text="融云消息集成" />
 
+
+        <Button
+            android:id="@+id/my_recyler_listview"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:text="RecyclerView ListView" />
+
+        <Button
+            android:id="@+id/drawer_demo"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:text="drawer_demo" />
+
+        <Button
+            android:id="@+id/h5_demo"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:text="html5 web入口" />
+
+    </LinearLayout>
+
+
+</ScrollView>
