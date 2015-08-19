@@ -3,11 +3,8 @@ package com.zcwfeng.sourcestudy.androidsourcestudystudio.activity;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
 import android.view.MenuItem;
-import android.view.View;
 import android.widget.Button;
-import android.widget.LinearLayout;
 
 import com.facebook.drawee.backends.pipeline.Fresco;
 import com.facebook.drawee.controller.BaseControllerListener;
@@ -20,18 +17,13 @@ import com.zcwfeng.sourcestudy.androidsourcestudystudio.basic.BaseActivity;
 import com.zcwfeng.sourcestudy.androidsourcestudystudio.drawerlayout.DrawerLayoutDemo;
 import com.zcwfeng.sourcestudy.androidsourcestudystudio.fresco.FrescoDemoActivity;
 import com.zcwfeng.sourcestudy.androidsourcestudystudio.mprogressbar.ProgressBarActivity_;
-import com.zcwfeng.sourcestudy.androidsourcestudystudio.recycleviews.RecycleMainActivity;
 import com.zcwfeng.sourcestudy.androidsourcestudystudio.recycleviews.recylerlistview.RecyclerViewTestActivity;
 import com.zcwfeng.sourcestudy.androidsourcestudystudio.recycleviews.waterfalldemo.WaterFlallMainActivity;
-import com.zcwfeng.sourcestudy.androidsourcestudystudio.rongcloud.MessageActivity;
 
-import org.androidannotations.annotations.AfterInject;
 import org.androidannotations.annotations.AfterViews;
 import org.androidannotations.annotations.Click;
 import org.androidannotations.annotations.EActivity;
 import org.androidannotations.annotations.ViewById;
-
-import roboguice.inject.InjectView;
 
 //http://plugins.jetbrains.com/plugin/7369
 
@@ -50,8 +42,6 @@ public class MainActivity extends BaseActivity {
     @ViewById(R.id.mProgressBar)
     Button mProgressBar;
     long exitTime;//点击返回时间
-    @ViewById
-    Button mMessage;//RongYun
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -130,11 +120,6 @@ public class MainActivity extends BaseActivity {
         startActivity(intent);
     }
 
-    @Click(R.id.mMessage)
-    public void testRontYunMessage(){
-        Intent intent = new Intent(MainActivity.this, MessageActivity.class);
-        startActivity(intent);
-    }
 
     @Click({R.id.drawer_demo})
     public void testClicks(){

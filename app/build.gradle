@@ -7,10 +7,22 @@ android {
 
     defaultConfig {
         applicationId "com.zcwfeng.sourcestudy.androidsourcestudystudio"
-        targetSdkVersion
+        targetSdkVersion 19
         versionCode 1
         versionName "1.0"
         minSdkVersion 16
+
+    }
+
+
+
+    signingConfigs {
+        config {
+            storeFile file("rong.key")
+            storePassword "Amigo123"
+            keyAlias "RongCloud"
+            keyPassword "Amigo123"
+        }
     }
     buildTypes {
         release {
@@ -18,14 +30,13 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
-
 }
 
 dependencies {
     apt "org.androidannotations:androidannotations:$AAVersion"
-    compile fileTree(include: ['*.jar'], dir: 'libs')
+    compile fileTree(include: ['*.jar'], dir: 'src/main/libs')
     compile "org.androidannotations:androidannotations-api:$AAVersion"
-    compile 'com.facebook.fresco:fresco:0.5.3+'
+    compile 'com.facebook.fresco:fresco:0.6.0+'
     compile 'com.android.support:recyclerview-v7:21.+'
     compile 'com.android.support:palette-v7:21.+'
     compile 'com.android.support:appcompat-v7:22.2.0'
@@ -34,7 +45,10 @@ dependencies {
     compile project(':library')
     compile project(':mylibrary')
     compile project(':IMKit')
+    compile files('src/main/libs/greendao-1.3.7.jar')
+
 }
+
 
 apt {
     arguments {

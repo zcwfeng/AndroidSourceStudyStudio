@@ -64,12 +64,6 @@
             android:text="ProgressBar Activity" />
 
 
-        <Button
-            android:id="@+id/mMessage"
-            android:layout_width="match_parent"
-            android:layout_height="40dp"
-            android:text="融云消息集成" />
-
 
         <Button
             android:id="@+id/my_recyler_listview"
