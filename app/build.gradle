@@ -3,14 +3,17 @@ apply plugin: 'android-apt'
 def AAVersion = '3.3.1'
 android {
     compileSdkVersion 21
-    buildToolsVersion '21.0.1'
+    buildToolsVersion "22.0.1"
 
     defaultConfig {
         applicationId "com.zcwfeng.sourcestudy.androidsourcestudystudio"
-        targetSdkVersion 19
+        targetSdkVersion 22
         versionCode 1
         versionName "1.0"
         minSdkVersion 16
+
+
+        manifestPlaceholders = [ CHANNEL_NAME:"Unspecified"]
 
     }
 
@@ -30,22 +33,36 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
+
+    productFlavors {
+//        yingyongbao {
+//            manifestPlaceholders = [ CHANNEL_NAME:"YINGYONGBAO"]
+//        }
+//        umeng {
+//            manifestPlaceholders = [ CHANNEL_NAME:"UMENG" ]
+//        }
+//        wandoujia {
+//            manifestPlaceholders = [ CHANNEL_NAME:"WANDOUJIA" ]
+//        }
+
+    }
 }
 
 dependencies {
-    apt "org.androidannotations:androidannotations:$AAVersion"
     compile fileTree(include: ['*.jar'], dir: 'src/main/libs')
+    apt "org.androidannotations:androidannotations:$AAVersion"
     compile "org.androidannotations:androidannotations-api:$AAVersion"
     compile 'com.facebook.fresco:fresco:0.6.0+'
-    compile 'com.android.support:recyclerview-v7:21.+'
-    compile 'com.android.support:palette-v7:21.+'
-    compile 'com.android.support:appcompat-v7:22.2.0'
-    compile 'com.google.code.gson:gson:2.3'
+    compile 'com.android.support:recyclerview-v7:22.+'
+    compile 'com.android.support:palette-v7:22.+'
     compile 'com.github.erd:android-volley:1.0.0'
     compile project(':library')
     compile project(':mylibrary')
     compile project(':IMKit')
-    compile files('src/main/libs/greendao-1.3.7.jar')
+    compile 'com.android.support:appcompat-v7:22.2.0'
+    compile 'jp.wasabeef:recyclerview-animators:1.2.0@aar'
+    compile 'com.github.navasmdc:MaterialDesign:1.5@aar'
+
 
 }
 
@@ -55,6 +72,7 @@ apt {
         androidManifestFile variant.outputs[0].processResources.manifestFile
 //        androidManifestFile variant.processResources.manifestFile
         resourcePackageName 'com.zcwfeng.sourcestudy.androidsourcestudystudio'
+//        resourcePackageName 'org.androidannotations.gradle'
     }
 }
 

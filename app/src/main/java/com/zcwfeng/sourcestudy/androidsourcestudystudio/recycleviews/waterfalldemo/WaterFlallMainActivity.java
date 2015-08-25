@@ -132,7 +132,7 @@ public class WaterFlallMainActivity extends BaseActivity implements ResponseCall
     private void setToolbar() {
         //setSupportActionBar(toolbar);
         toolbar.inflateMenu(R.menu.aaa_menu_main);
-        toolbar.setNavigationIcon(getResources().getDrawable(R.drawable.ic_launcher));//设置导航按钮
+        toolbar.setNavigationIcon(getResources().getDrawable(R.mipmap.ic_launcher));//设置导航按钮
         toolbar.setTitle("Saber");
         toolbar.setAlpha(0);
         toolbar.setNavigationOnClickListener(new View.OnClickListener() {

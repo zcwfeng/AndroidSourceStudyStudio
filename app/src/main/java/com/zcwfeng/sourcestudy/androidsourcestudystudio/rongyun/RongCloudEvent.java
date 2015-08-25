@@ -186,7 +186,7 @@ public final class RongCloudEvent implements RongIMClient.OnReceiveMessageListen
 
              notification = new Notification.Builder(RongContext.getInstance())
                     .setLargeIcon(getAppIcon())
-                    .setSmallIcon(R.drawable.ic_launcher)
+                    .setSmallIcon(R.mipmap.ic_launcher)
                     .setTicker("自定义 notification")
                     .setContentTitle("自定义 title")
                     .setContentText("这是 Content:"+msg.getObjectName())

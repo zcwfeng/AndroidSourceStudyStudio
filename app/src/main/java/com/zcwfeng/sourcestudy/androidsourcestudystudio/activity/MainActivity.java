@@ -1,6 +1,8 @@
 package com.zcwfeng.sourcestudy.androidsourcestudystudio.activity;
 
 import android.content.Intent;
+import android.graphics.Canvas;
+import android.graphics.Path;
 import android.net.Uri;
 import android.os.Bundle;
 import android.view.MenuItem;
@@ -15,10 +17,12 @@ import com.zcwfeng.sourcestudy.androidsourcestudystudio.MyApplication;
 import com.zcwfeng.sourcestudy.androidsourcestudystudio.R;
 import com.zcwfeng.sourcestudy.androidsourcestudystudio.basic.BaseActivity;
 import com.zcwfeng.sourcestudy.androidsourcestudystudio.drawerlayout.DrawerLayoutDemo;
+import com.zcwfeng.sourcestudy.androidsourcestudystudio.floatactionbutton.NewAndroidWidgetDemo;
 import com.zcwfeng.sourcestudy.androidsourcestudystudio.fresco.FrescoDemoActivity;
 import com.zcwfeng.sourcestudy.androidsourcestudystudio.mprogressbar.ProgressBarActivity_;
 import com.zcwfeng.sourcestudy.androidsourcestudystudio.recycleviews.recylerlistview.RecyclerViewTestActivity;
 import com.zcwfeng.sourcestudy.androidsourcestudystudio.recycleviews.waterfalldemo.WaterFlallMainActivity;
+import com.zcwfeng.sourcestudy.androidsourcestudystudio.views.CustomViewTestActivity;
 
 import org.androidannotations.annotations.AfterViews;
 import org.androidannotations.annotations.Click;
@@ -63,8 +67,9 @@ public class MainActivity extends BaseActivity {
                 .build();
         draweeView.setController(controller);
 
-
     }
+
+
 
 
     @Click(R.id.test_stick_nav_layout)
@@ -130,6 +135,18 @@ public class MainActivity extends BaseActivity {
     @Click(R.id.h5_demo)
     public void goHtml5(){
         Intent intent = new Intent(MainActivity.this, HTML5Main.class);
+        startActivity(intent);
+    }
+    @Click(R.id.btn_new_widget)
+    public void newWidget(){
+        Intent intent = new Intent(MainActivity.this, NewAndroidWidgetDemo.class);
+        startActivity(intent);
+    }
+
+
+    @Click(R.id.custom_view)
+    public void customView(){
+        Intent intent = new Intent(MainActivity.this, CustomViewTestActivity.class);
         startActivity(intent);
     }
     @Override

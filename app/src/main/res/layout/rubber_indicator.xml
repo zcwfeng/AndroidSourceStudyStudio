@@ -7,7 +7,7 @@
         android:layout_width="85dp"
         android:layout_height="85dp"
         android:layout_centerVertical="true"
-        app:cv_color="@color/outerCircleColor" />
+        app:cv_color="#FF533456" />
 
     <View
         android:id="@+id/container_wrapper"
@@ -20,7 +20,7 @@
         android:layout_gravity="center"
         android:layout_marginBottom="20dp"
         android:layout_marginTop="20dp"
-        android:background="@drawable/indicator_background" />
+        android:background="@mipmap/indicator_background" />
 
     <LinearLayout
         android:id="@id/container"

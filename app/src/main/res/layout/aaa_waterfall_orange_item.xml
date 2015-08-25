@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:layout_margin="6dp"
-    android:background="@color/white"
+    android:background="#ffffff"
     >
 
     <com.zcwfeng.sourcestudy.androidsourcestudystudio.recycleviews.waterfalldemo.DynamicHeightSimpleDraweeView
@@ -27,7 +27,7 @@
         android:layout_marginTop="8dp"
         android:ellipsize="end"
         android:maxLines="6"
-        android:textColor="@color/dark"
+        android:textColor="@color/primary_dark_material_dark"
         android:textSize="12sp"
         tools:text="测试文字"
         />
@@ -39,9 +39,9 @@
         android:layout_alignLeft="@+id/aaa_wf_item_description_textView"
         android:layout_alignStart="@+id/aaa_wf_item_description_textView"
         android:layout_alignTop="@+id/aaa_wf_item_comment_num_textView"
-        android:drawableLeft="@drawable/aaa_waterfall_item_icon_star"
+        android:drawableLeft="@mipmap/aaa_waterfall_item_icon_star"
         android:text="-1"
-        android:textColor="@color/gray"
+        android:textColor="@color/material_blue_grey_800"
         android:textSize="11sp"
         />
 
@@ -53,9 +53,9 @@
         android:layout_marginLeft="6dp"
         android:layout_marginTop="6dp"
         android:layout_toRightOf="@id/aaa_wf_item_stars_number_textView"
-        android:drawableLeft="@drawable/aaa_waterfall_item_icon_comments"
+        android:drawableLeft="@mipmap/aaa_waterfall_item_icon_comments"
         android:text="-1"
-        android:textColor="@color/gray"
+        android:textColor="@color/material_blue_grey_800"
         android:textSize="11sp"
         />
 
@@ -67,9 +67,9 @@
         android:layout_marginLeft="6dp"
         android:layout_marginTop="6dp"
         android:layout_toRightOf="@id/aaa_wf_item_comment_num_textView"
-        android:drawableLeft="@drawable/aaa_waterfall_item_icon_good"
+        android:drawableLeft="@mipmap/aaa_waterfall_item_icon_good"
         android:text="-1"
-        android:textColor="@color/gray"
+        android:textColor="@color/material_blue_grey_800"
         android:textSize="11sp"
         />
 
@@ -82,8 +82,8 @@
         android:layout_below="@+id/aaa_wf_item_stars_number_textView"
         android:layout_marginBottom="13dp"
         android:layout_marginTop="13dp"
-        fresco:failureImage="@drawable/error_photo"
-        fresco:placeholderImage="@drawable/default_head_pic"
+        fresco:failureImage="@mipmap/error_photo"
+        fresco:placeholderImage="@mipmap/default_head_pic"
         fresco:placeholderImageScaleType="fitCenter"
         fresco:roundAsCircle="true"
         />
@@ -97,7 +97,7 @@
         android:layout_toEndOf="@+id/aaa_wf_item_user_head_draweeView"
         android:layout_toRightOf="@+id/aaa_wf_item_user_head_draweeView"
         android:textAppearance="?android:attr/textAppearanceMedium"
-        android:textColor="@color/gray"
+        android:textColor="@color/material_blue_grey_800"
         tools:text="position"
         />
 </RelativeLayout>
