@@ -1,8 +1,7 @@
 package com.zcwfeng.sourcestudy.androidsourcestudystudio.activity;
 
 import android.content.Intent;
-import android.graphics.Canvas;
-import android.graphics.Path;
+import android.database.sqlite.SQLiteDatabase;
 import android.net.Uri;
 import android.os.Bundle;
 import android.view.MenuItem;
@@ -15,6 +14,8 @@ import com.facebook.drawee.interfaces.DraweeController;
 import com.facebook.drawee.view.SimpleDraweeView;
 import com.zcwfeng.sourcestudy.androidsourcestudystudio.MyApplication;
 import com.zcwfeng.sourcestudy.androidsourcestudystudio.R;
+import com.zcwfeng.sourcestudy.androidsourcestudystudio.activity.litepal.ChooseAreaActivity;
+import com.zcwfeng.sourcestudy.androidsourcestudystudio.activity.litepal.WeatherActivity;
 import com.zcwfeng.sourcestudy.androidsourcestudystudio.basic.BaseActivity;
 import com.zcwfeng.sourcestudy.androidsourcestudystudio.drawerlayout.DrawerLayoutDemo;
 import com.zcwfeng.sourcestudy.androidsourcestudystudio.floatactionbutton.NewAndroidWidgetDemo;
@@ -28,6 +29,7 @@ import org.androidannotations.annotations.AfterViews;
 import org.androidannotations.annotations.Click;
 import org.androidannotations.annotations.EActivity;
 import org.androidannotations.annotations.ViewById;
+import org.litepal.tablemanager.Connector;
 
 //http://plugins.jetbrains.com/plugin/7369
 
@@ -52,6 +54,12 @@ public class MainActivity extends BaseActivity {
         super.onCreate(savedInstanceState);
         MyApplication.getInstance().notifyCloseMe();
 
+//        testLitePal();
+
+    }
+
+    private void testLitePal() {
+        SQLiteDatabase db = Connector.getDatabase();
     }
 
     @AfterViews
@@ -149,6 +157,13 @@ public class MainActivity extends BaseActivity {
         Intent intent = new Intent(MainActivity.this, CustomViewTestActivity.class);
         startActivity(intent);
     }
+
+    @Click(R.id.weather_forecast)
+    public void forecast(){
+        Intent intent = new Intent(MainActivity.this, ChooseAreaActivity.class);
+        startActivity(intent);
+    }
+
     @Override
     public void onBackPressed() {
         //2次点击返回退出

@@ -25,4 +25,6 @@
     <string name="drawer_open">开</string>
     <string name="drawer_close">关</string>
 
+    <string name="split_a">-</string>
+
 </resources>

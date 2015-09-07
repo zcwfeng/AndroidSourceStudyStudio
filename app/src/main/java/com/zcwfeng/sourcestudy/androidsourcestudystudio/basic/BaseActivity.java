@@ -7,6 +7,9 @@ import android.support.v7.app.AppCompatActivity;
 import android.util.ArrayMap;
 import android.util.AtomicFile;
 
+import com.zcwfeng.sourcestudy.androidsourcestudystudio.utils.ActivityCollector;
+import com.zcwfeng.sourcestudy.androidsourcestudystudio.utils.LogUtil;
+
 /**
  * @author zcw
  * @version 1.0
@@ -18,5 +21,14 @@ public class BaseActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        LogUtil.d("BaseActivity", "----------->" + getClass().getSimpleName());
+        ActivityCollector.addActivity(this);
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        ActivityCollector.removeActivity(this);
+
     }
 }

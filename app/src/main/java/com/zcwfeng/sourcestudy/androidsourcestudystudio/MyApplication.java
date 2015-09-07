@@ -15,6 +15,8 @@ import com.zcwfeng.sourcestudy.androidsourcestudystudio.message.DemoCommandNotif
 import com.zcwfeng.sourcestudy.androidsourcestudystudio.rongyun.DemoContext;
 import com.zcwfeng.sourcestudy.androidsourcestudystudio.rongyun.RongCloudEvent;
 
+import org.litepal.LitePalApplication;
+
 import java.util.ArrayList;
 
 import io.rong.imkit.RongIM;
@@ -23,7 +25,7 @@ import io.rong.imlib.ipc.RongExceptionHandler;
 /**
  * Created by 11111 on 2015/7/9.
  */
-public class MyApplication extends Application {
+public class MyApplication extends LitePalApplication {
     public static MyApplication app;
     public static MyApplication getInstance() {
         return app;
