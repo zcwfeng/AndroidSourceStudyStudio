@@ -9,24 +9,26 @@
         android:layout_centerVertical="true"
         app:cv_color="#FF533456" />
 
-    <View
-        android:id="@+id/container_wrapper"
-        android:layout_width="wrap_content"
-        android:layout_height="match_parent"
-        android:layout_alignEnd="@+id/container"
-        android:layout_alignLeft="@+id/container"
-        android:layout_alignRight="@+id/container"
-        android:layout_alignStart="@+id/container"
-        android:layout_gravity="center"
-        android:layout_marginBottom="20dp"
-        android:layout_marginTop="20dp"
-        android:background="@mipmap/indicator_background" />
-
     <LinearLayout
-        android:id="@id/container"
+        android:id="@+id/container"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_gravity="center"
         android:gravity="center"
         android:orientation="horizontal" />
+
+    <View
+        android:id="@+id/container_wrapper"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_alignEnd="@id/container"
+        android:layout_alignLeft="@id/container"
+        android:layout_alignRight="@id/container"
+        android:layout_alignStart="@id/container"
+        android:layout_gravity="center"
+        android:layout_marginBottom="20dp"
+        android:layout_marginTop="20dp"
+        android:background="@mipmap/indicator_background" />
+
+
 </merge>

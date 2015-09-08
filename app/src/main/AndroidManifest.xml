@@ -29,6 +29,20 @@
     <!--获取联系人信息，demo中演示发送通讯录消息-->
     <uses-permission android:name="android.permission.READ_CONTACTS" />
 
+
+    <!--BugTags-->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <!--<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />-->
+    <!--<uses-permission android:name="android.permission.INTERNET" />-->
+    <!--<uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />-->
+    <!--<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />-->
+    <!--<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />-->
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_LOGS" />
+    <!--<uses-permission android:name="android.permission.READ_PHONE_STATE" />-->
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <!--end-->
+
     <application
         android:name=".MyApplication"
         android:allowBackup="true"
@@ -203,6 +217,22 @@
             android:name="UMENG_CHANNEL"
             android:value="${CHANNEL_NAME}" />
         <!--end rongcloud-->
+
+
+        <!--ButTags -->
+        <activity
+            android:name="com.bugtags.library.BugtagsActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar.Fullscreen"/>
+        <receiver
+            android:name="com.bugtags.library.BugtagsReceiver">
+            <intent-filter>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE"/>
+            </intent-filter>
+        </receiver>
+        <service
+            android:name="com.bugtags.library.BugtagsService"/>
+        <!--BugTags End-->
     </application>
 
 </manifest>

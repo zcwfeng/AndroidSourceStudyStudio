@@ -7,6 +7,7 @@ import android.widget.Toast;
 
 import com.android.volley.RequestQueue;
 import com.android.volley.toolbox.Volley;
+import com.bugtags.library.Bugtags;
 import com.facebook.drawee.backends.pipeline.Fresco;
 import com.zcwfeng.sourcestudy.androidsourcestudystudio.basic.CloseMe;
 import com.zcwfeng.sourcestudy.androidsourcestudystudio.message.ContactNotificationMessageProvider;
@@ -48,7 +49,8 @@ public class MyApplication extends LitePalApplication {
         requestQueue = Volley.newRequestQueue(this);
         // 初始化fresco库
         Fresco.initialize(this);
-
+        //在这里初始化
+        Bugtags.start("a9a7df7976bd7d1aab5c25bdffb48a2b", this, Bugtags.BTGInvocationEventBubble);
 
         /**
          * 注意：
