@@ -70,6 +70,23 @@
         <!-- <activity android:name="com.zcwfeng.sourcestudy.androidsourcestudystudio.rongcloud.MessageActivity_"></activity>-->
 
         <!-- 非注解的Activity -->
+
+        <!--A Simple Cache Of Afinal-->
+        <activity android:name="com.zcwfeng.sourcestudy.androidsourcestudystudio.asimplecache.MainActivity" />
+        <activity android:name="com.zcwfeng.sourcestudy.androidsourcestudystudio.asimplecache.AboutActivity" />
+        <activity android:name="com.zcwfeng.sourcestudy.androidsourcestudystudio.asimplecache.SaveBitmapActivity" />
+        <activity android:name="com.zcwfeng.sourcestudy.androidsourcestudystudio.asimplecache.SaveJsonObjectActivity" />
+        <activity android:name="com.zcwfeng.sourcestudy.androidsourcestudystudio.asimplecache.SaveObjectActivity" />
+        <activity android:name="com.zcwfeng.sourcestudy.androidsourcestudystudio.asimplecache.SaveStringActivity" />
+        <activity android:name="com.zcwfeng.sourcestudy.androidsourcestudystudio.asimplecache.SaveMediaActivity" />
+        <activity
+            android:name="com.zcwfeng.sourcestudy.androidsourcestudystudio.asimplecache.SaveDrawableActivity"
+            android:label="@string/title_activity_save_drawable">
+        </activity>
+        <activity
+            android:name="com.zcwfeng.sourcestudy.androidsourcestudystudio.asimplecache.SaveJsonArrayActivity"
+            android:label="@string/title_activity_save_json_array"></activity>
+
         <!-- litepal city 天气预报-->
         <activity
             android:name="com.zcwfeng.sourcestudy.androidsourcestudystudio.activity.litepal.ChooseAreaActivity"

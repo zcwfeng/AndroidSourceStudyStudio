@@ -285,7 +285,6 @@ public class ChooseAreaActivity extends BaseActivity {
                 Intent intent = new Intent(this, WeatherActivity.class);
                 startActivity(intent);
             }
-            finish();
             LogUtil.i("CHOOSEAREAACTIVITY", "------------->3");
         }
     }

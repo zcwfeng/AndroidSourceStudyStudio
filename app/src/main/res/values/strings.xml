@@ -27,4 +27,7 @@
 
     <string name="split_a">-</string>
 
+    <string name="title_activity_save_drawable">SaveDrawableActivity</string>
+    <string name="title_activity_save_json_array">SaveJsonArrayActivity</string>
+
 </resources>

@@ -99,6 +99,12 @@
             android:layout_height="40dp"
             android:text="litepal 框架天气预报"
             />
+        <Button
+            android:id="@+id/asimplecache"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:text="A Simple Cache"
+            />
 
 
 

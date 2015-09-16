@@ -80,8 +80,6 @@ public class MainActivity extends BaseActivity {
     }
 
 
-
-
     @Click(R.id.test_stick_nav_layout)
     public void mBtnClick() {
         Intent intent = new Intent(this, com.zcwfeng.sourcestudy.androidsourcestudystudio.stickynavlayout.StickNavLayoutMainActivity.class);
@@ -95,7 +93,7 @@ public class MainActivity extends BaseActivity {
     }
 
     @Click(R.id.mInjectView)
-    public void clickRoboGuiceTest(){
+    public void clickRoboGuiceTest() {
         MyApplication.getInstance().showLongToast("还没研究明白InjectView");
 //        Intent intent = new Intent(MainActivity.this, RoboDemoActivity.class);
 //        startActivity(intent);
@@ -117,7 +115,7 @@ public class MainActivity extends BaseActivity {
     }
 
     @Click(R.id.my_recyler_listview)
-    public void testRecylerViewListView(){
+    public void testRecylerViewListView() {
 
         Intent intent = new Intent(MainActivity.this, RecyclerViewTestActivity.class);
         startActivity(intent);
@@ -137,32 +135,39 @@ public class MainActivity extends BaseActivity {
 
 
     @Click({R.id.drawer_demo})
-    public void testClicks(){
+    public void testClicks() {
         Intent intent = new Intent(MainActivity.this, DrawerLayoutDemo.class);
         startActivity(intent);
     }
 
     @Click(R.id.h5_demo)
-    public void goHtml5(){
+    public void goHtml5() {
         Intent intent = new Intent(MainActivity.this, HTML5Main.class);
         startActivity(intent);
     }
+
     @Click(R.id.btn_new_widget)
-    public void newWidget(){
+    public void newWidget() {
         Intent intent = new Intent(MainActivity.this, NewAndroidWidgetDemo.class);
         startActivity(intent);
     }
 
 
     @Click(R.id.custom_view)
-    public void customView(){
+    public void customView() {
         Intent intent = new Intent(MainActivity.this, CustomViewTestActivity.class);
         startActivity(intent);
     }
 
     @Click(R.id.weather_forecast)
-    public void forecast(){
+    public void forecast() {
         Intent intent = new Intent(MainActivity.this, ChooseAreaActivity.class);
+        startActivity(intent);
+    }
+
+    @Click(R.id.asimplecache)
+    public void testAsimpleCache() {
+        Intent intent = new Intent(MainActivity.this, com.zcwfeng.sourcestudy.androidsourcestudystudio.asimplecache.MainActivity.class);
         startActivity(intent);
     }
 
