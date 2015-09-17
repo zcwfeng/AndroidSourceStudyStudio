@@ -171,6 +171,17 @@ public class MainActivity extends BaseActivity {
         startActivity(intent);
     }
 
+    @Click(R.id.custom_shotscreen)
+    public void testShotScreen() {
+//        Intent intent = new Intent(MainActivity.this, com.zcwfeng.sourcestudy.androidsourcestudystudio.shotscreen.MainActivity.class);
+//        Intent intent = new Intent(MainActivity.this, com.zcwfeng.sourcestudy.androidsourcestudystudio.shotscreen2.ScreenshotActivity.class);
+        Intent intent = new Intent(MainActivity.this, com.zcwfeng.sourcestudy.androidsourcestudystudio.shotscreen3.ClipPictureActivity.class);
+
+        startActivity(intent);
+    }
+
+
+
     @Override
     public void onBackPressed() {
         //2次点击返回退出

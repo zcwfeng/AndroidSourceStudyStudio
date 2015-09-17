@@ -87,6 +87,12 @@
             android:name="com.zcwfeng.sourcestudy.androidsourcestudystudio.asimplecache.SaveJsonArrayActivity"
             android:label="@string/title_activity_save_json_array"></activity>
 
+
+        <!-- Shot Screen-->
+        <activity android:name="com.zcwfeng.sourcestudy.androidsourcestudystudio.shotscreen.MainActivity"></activity>
+        <activity android:name="com.zcwfeng.sourcestudy.androidsourcestudystudio.shotscreen2.ScreenshotActivity"></activity>
+        <activity android:name="com.zcwfeng.sourcestudy.androidsourcestudystudio.shotscreen3.ClipPictureActivity"></activity>
+        <activity android:name="com.zcwfeng.sourcestudy.androidsourcestudystudio.shotscreen3.PreviewActivity"></activity>
         <!-- litepal city 天气预报-->
         <activity
             android:name="com.zcwfeng.sourcestudy.androidsourcestudystudio.activity.litepal.ChooseAreaActivity"
