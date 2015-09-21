@@ -22,7 +22,7 @@
         android:layout_height="56dp"
         android:layout_marginBottom="16dp"
         android:layout_marginRight="16dp"
-        android:src="@drawable/aaa_go_top_icon"
+        android:src="@mipmap/aaa_go_top_icon"
         android:layout_gravity="right|bottom"/>
 
     <android.support.v7.widget.Toolbar

@@ -1,14 +1,14 @@
 package com.zcwfeng.sourcestudy.androidsourcestudystudio.activity;
 
 import android.content.Intent;
+import android.database.sqlite.SQLiteDatabase;
 import android.net.Uri;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
 import android.view.MenuItem;
-import android.view.View;
+import android.view.MotionEvent;
 import android.widget.Button;
-import android.widget.LinearLayout;
 
+import com.bugtags.library.Bugtags;
 import com.facebook.drawee.backends.pipeline.Fresco;
 import com.facebook.drawee.controller.BaseControllerListener;
 import com.facebook.drawee.controller.ControllerListener;
@@ -16,22 +16,22 @@ import com.facebook.drawee.interfaces.DraweeController;
 import com.facebook.drawee.view.SimpleDraweeView;
 import com.zcwfeng.sourcestudy.androidsourcestudystudio.MyApplication;
 import com.zcwfeng.sourcestudy.androidsourcestudystudio.R;
+import com.zcwfeng.sourcestudy.androidsourcestudystudio.activity.litepal.ChooseAreaActivity;
+import com.zcwfeng.sourcestudy.androidsourcestudystudio.activity.litepal.WeatherActivity;
 import com.zcwfeng.sourcestudy.androidsourcestudystudio.basic.BaseActivity;
 import com.zcwfeng.sourcestudy.androidsourcestudystudio.drawerlayout.DrawerLayoutDemo;
+import com.zcwfeng.sourcestudy.androidsourcestudystudio.floatactionbutton.NewAndroidWidgetDemo;
 import com.zcwfeng.sourcestudy.androidsourcestudystudio.fresco.FrescoDemoActivity;
 import com.zcwfeng.sourcestudy.androidsourcestudystudio.mprogressbar.ProgressBarActivity_;
-import com.zcwfeng.sourcestudy.androidsourcestudystudio.recycleviews.RecycleMainActivity;
 import com.zcwfeng.sourcestudy.androidsourcestudystudio.recycleviews.recylerlistview.RecyclerViewTestActivity;
 import com.zcwfeng.sourcestudy.androidsourcestudystudio.recycleviews.waterfalldemo.WaterFlallMainActivity;
-import com.zcwfeng.sourcestudy.androidsourcestudystudio.rongcloud.MessageActivity;
+import com.zcwfeng.sourcestudy.androidsourcestudystudio.views.CustomViewTestActivity;
 
-import org.androidannotations.annotations.AfterInject;
 import org.androidannotations.annotations.AfterViews;
 import org.androidannotations.annotations.Click;
 import org.androidannotations.annotations.EActivity;
 import org.androidannotations.annotations.ViewById;
-
-import roboguice.inject.InjectView;
+import org.litepal.tablemanager.Connector;
 
 //http://plugins.jetbrains.com/plugin/7369
 
@@ -50,14 +50,18 @@ public class MainActivity extends BaseActivity {
     @ViewById(R.id.mProgressBar)
     Button mProgressBar;
     long exitTime;//点击返回时间
-    @ViewById
-    Button mMessage;//RongYun
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         MyApplication.getInstance().notifyCloseMe();
 
+//        testLitePal();
+
+    }
+
+    private void testLitePal() {
+        SQLiteDatabase db = Connector.getDatabase();
     }
 
     @AfterViews
@@ -72,7 +76,6 @@ public class MainActivity extends BaseActivity {
                 .setControllerListener(listener)
                 .build();
         draweeView.setController(controller);
-
 
     }
 
@@ -90,7 +93,7 @@ public class MainActivity extends BaseActivity {
     }
 
     @Click(R.id.mInjectView)
-    public void clickRoboGuiceTest(){
+    public void clickRoboGuiceTest() {
         MyApplication.getInstance().showLongToast("还没研究明白InjectView");
 //        Intent intent = new Intent(MainActivity.this, RoboDemoActivity.class);
 //        startActivity(intent);
@@ -112,7 +115,7 @@ public class MainActivity extends BaseActivity {
     }
 
     @Click(R.id.my_recyler_listview)
-    public void testRecylerViewListView(){
+    public void testRecylerViewListView() {
 
         Intent intent = new Intent(MainActivity.this, RecyclerViewTestActivity.class);
         startActivity(intent);
@@ -130,23 +133,55 @@ public class MainActivity extends BaseActivity {
         startActivity(intent);
     }
 
-    @Click(R.id.mMessage)
-    public void testRontYunMessage(){
-        Intent intent = new Intent(MainActivity.this, MessageActivity.class);
-        startActivity(intent);
-    }
 
     @Click({R.id.drawer_demo})
-    public void testClicks(){
+    public void testClicks() {
         Intent intent = new Intent(MainActivity.this, DrawerLayoutDemo.class);
         startActivity(intent);
     }
 
     @Click(R.id.h5_demo)
-    public void goHtml5(){
+    public void goHtml5() {
         Intent intent = new Intent(MainActivity.this, HTML5Main.class);
         startActivity(intent);
     }
+
+    @Click(R.id.btn_new_widget)
+    public void newWidget() {
+        Intent intent = new Intent(MainActivity.this, NewAndroidWidgetDemo.class);
+        startActivity(intent);
+    }
+
+
+    @Click(R.id.custom_view)
+    public void customView() {
+        Intent intent = new Intent(MainActivity.this, CustomViewTestActivity.class);
+        startActivity(intent);
+    }
+
+    @Click(R.id.weather_forecast)
+    public void forecast() {
+        Intent intent = new Intent(MainActivity.this, ChooseAreaActivity.class);
+        startActivity(intent);
+    }
+
+    @Click(R.id.asimplecache)
+    public void testAsimpleCache() {
+        Intent intent = new Intent(MainActivity.this, com.zcwfeng.sourcestudy.androidsourcestudystudio.asimplecache.MainActivity.class);
+        startActivity(intent);
+    }
+
+    @Click(R.id.custom_shotscreen)
+    public void testShotScreen() {
+//        Intent intent = new Intent(MainActivity.this, com.zcwfeng.sourcestudy.androidsourcestudystudio.shotscreen.MainActivity.class);
+//        Intent intent = new Intent(MainActivity.this, com.zcwfeng.sourcestudy.androidsourcestudystudio.shotscreen2.ScreenshotActivity.class);
+        Intent intent = new Intent(MainActivity.this, com.zcwfeng.sourcestudy.androidsourcestudystudio.shotscreen3.ClipPictureActivity.class);
+
+        startActivity(intent);
+    }
+
+
+
     @Override
     public void onBackPressed() {
         //2次点击返回退出
@@ -160,5 +195,26 @@ public class MainActivity extends BaseActivity {
             startActivity(intent);
             finish();
         }
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        //注：回调 1
+        Bugtags.onResume(this);
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+        //注：回调 2
+        Bugtags.onPause(this);
+    }
+
+    @Override
+    public boolean dispatchGenericMotionEvent(MotionEvent ev) {
+        //注：回调 3
+        Bugtags.onDispatchTouchEvent(this, ev);
+        return super.dispatchGenericMotionEvent(ev);
     }
 }

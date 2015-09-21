@@ -4,7 +4,7 @@
     android:layout_height="fill_parent">
 
     <ImageView
-        android:src="@drawable/aaa_go_top_icon"
+        android:src="@mipmap/aaa_go_top_icon"
         android:id="@+id/guide_pic_id"
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"

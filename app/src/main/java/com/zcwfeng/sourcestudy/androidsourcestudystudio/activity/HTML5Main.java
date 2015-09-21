@@ -132,4 +132,8 @@ public class HTML5Main extends BaseActivity {
     protected void onResume() {
         super.onResume();
     }
+
+
+
+
 }

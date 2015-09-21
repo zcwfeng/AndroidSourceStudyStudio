@@ -64,12 +64,6 @@
             android:text="ProgressBar Activity" />
 
 
-        <Button
-            android:id="@+id/mMessage"
-            android:layout_width="match_parent"
-            android:layout_height="40dp"
-            android:text="融云消息集成" />
-
 
         <Button
             android:id="@+id/my_recyler_listview"
@@ -88,6 +82,38 @@
             android:layout_width="match_parent"
             android:layout_height="40dp"
             android:text="html5 web入口" />
+
+        <Button
+            android:id="@+id/btn_new_widget"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:text="new widget"/>
+        <Button
+            android:id="@+id/custom_view"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:text="自定义View测试"/>
+        <Button
+            android:id="@+id/weather_forecast"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:text="litepal 框架天气预报"
+            />
+        <Button
+            android:id="@+id/asimplecache"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:text="A Simple Cache"
+            />
+
+        <Button
+            android:id="@+id/custom_shotscreen"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:text="ShotScreen"
+            />
+
+
 
     </LinearLayout>
 
