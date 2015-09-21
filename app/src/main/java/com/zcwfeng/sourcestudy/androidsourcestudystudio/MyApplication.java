@@ -3,6 +3,7 @@ package com.zcwfeng.sourcestudy.androidsourcestudystudio;
 import android.app.ActivityManager;
 import android.app.Application;
 import android.content.Context;
+import android.util.DisplayMetrics;
 import android.widget.Toast;
 
 import com.android.volley.RequestQueue;
@@ -34,7 +35,8 @@ public class MyApplication extends LitePalApplication {
     // 请求队列
     public static RequestQueue requestQueue;
 
-
+    public static int WIDTH;
+    public static int HEIGHT;
 
     /**
      * 关闭之前activity
@@ -51,6 +53,10 @@ public class MyApplication extends LitePalApplication {
         Fresco.initialize(this);
         //在这里初始化
         Bugtags.start("a9a7df7976bd7d1aab5c25bdffb48a2b", this, Bugtags.BTGInvocationEventBubble);
+
+        DisplayMetrics metric = getResources().getDisplayMetrics();
+        WIDTH = metric.widthPixels;
+        HEIGHT = metric.heightPixels;
 
         /**
          * 注意：

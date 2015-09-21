@@ -30,6 +30,7 @@
     <string name="title_activity_save_drawable">SaveDrawableActivity</string>
     <string name="title_activity_save_json_array">SaveJsonArrayActivity</string>
 
+    <string name="tip_photo_scale">图片加载中...</string>
 
      <string name="hello">        老男孩\n
 \n

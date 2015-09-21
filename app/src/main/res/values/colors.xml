@@ -10,4 +10,12 @@
     <color name="color_primary_red_dark">#d32f2f</color>
     <color name="color_primary_green"> #4caf50</color>
     <color name="color_primary_green_dark">#388e3c</color>
+
+
+
+
+    <color name="t_white">#50ffffff</color>
+    <color name="activity_bg">#262626</color>
+    <color name="cut_black">#aa000000</color>
+
 </resources>
