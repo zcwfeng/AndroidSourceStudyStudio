@@ -175,7 +175,8 @@ public class MainActivity extends BaseActivity {
     public void testShotScreen() {
 //        Intent intent = new Intent(MainActivity.this, com.zcwfeng.sourcestudy.androidsourcestudystudio.shotscreen.MainActivity.class);
 //        Intent intent = new Intent(MainActivity.this, com.zcwfeng.sourcestudy.androidsourcestudystudio.shotscreen2.ScreenshotActivity.class);
-        Intent intent = new Intent(MainActivity.this, com.zcwfeng.sourcestudy.androidsourcestudystudio.shotscreen3.ClipPictureActivity.class);
+//        Intent intent = new Intent(MainActivity.this, com.zcwfeng.sourcestudy.androidsourcestudystudio.shotscreen3.ClipPictureActivity.class);
+        Intent intent = new Intent(MainActivity.this, com.zcwfeng.sourcestudy.androidsourcestudystudio.shotscreen5.CutActivity.class);
 
         startActivity(intent);
     }

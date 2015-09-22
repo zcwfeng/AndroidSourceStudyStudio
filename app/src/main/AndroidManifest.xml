@@ -93,6 +93,8 @@
         <activity android:name="com.zcwfeng.sourcestudy.androidsourcestudystudio.shotscreen2.ScreenshotActivity"></activity>
         <activity android:name="com.zcwfeng.sourcestudy.androidsourcestudystudio.shotscreen3.ClipPictureActivity"></activity>
         <activity android:name="com.zcwfeng.sourcestudy.androidsourcestudystudio.shotscreen3.PreviewActivity"></activity>
+
+        <activity android:name="com.zcwfeng.sourcestudy.androidsourcestudystudio.shotscreen5.CutActivity"></activity>
         <!-- litepal city 天气预报-->
         <activity
             android:name="com.zcwfeng.sourcestudy.androidsourcestudystudio.activity.litepal.ChooseAreaActivity"

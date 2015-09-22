@@ -12,7 +12,11 @@
     <color name="color_primary_green_dark">#388e3c</color>
 
 
-    <color name="c262626">#262626</color>
-    <color name="c50ffffff">#50ffffff</color>
-    <color name="aa000000">#aa000000</color>
+
+
+
+    <color name="t_white">#50ffffff</color>
+    <color name="activity_bg">#262626</color>
+    <color name="cut_black">#aa000000</color>
+
 </resources>
