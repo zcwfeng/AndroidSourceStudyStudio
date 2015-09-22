@@ -10,4 +10,9 @@
     <color name="color_primary_red_dark">#d32f2f</color>
     <color name="color_primary_green"> #4caf50</color>
     <color name="color_primary_green_dark">#388e3c</color>
+
+
+    <color name="c262626">#262626</color>
+    <color name="c50ffffff">#50ffffff</color>
+    <color name="aa000000">#aa000000</color>
 </resources>

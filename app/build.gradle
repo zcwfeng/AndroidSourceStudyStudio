@@ -59,6 +59,7 @@ dependencies {
     compile project(':library')
     compile project(':mylibrary')
     compile project(':IMKit')
+    compile project(':croplib')
     compile 'com.android.support:appcompat-v7:22.2.0'
     compile 'jp.wasabeef:recyclerview-animators:1.2.0@aar'
     compile 'com.github.navasmdc:MaterialDesign:1.5@aar'
