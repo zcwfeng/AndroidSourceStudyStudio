@@ -24,8 +24,17 @@ repositories {
 allprojects {
     repositories {
         jcenter()
+        mavenCentral()
         maven {
-            url "https://jitpack.io"
+            url 'https://jitpack.io'
+        }
+        maven {
+            url 'https://oss.sonatype.org/content/repositories/snapshots'
         }
     }
+
 }
+
+
+
+

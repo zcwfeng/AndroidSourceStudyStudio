@@ -72,6 +72,7 @@
         <!-- 非注解的Activity -->
 
         <!--A Simple Cache Of Afinal-->
+        <activity android:name="com.zcwfeng.sourcestudy.androidsourcestudystudio.renderscript.RenderscriptMainActivity"></activity>
         <activity android:name="com.zcwfeng.sourcestudy.androidsourcestudystudio.asimplecache.MainActivity" />
         <activity android:name="com.zcwfeng.sourcestudy.androidsourcestudystudio.asimplecache.AboutActivity" />
         <activity android:name="com.zcwfeng.sourcestudy.androidsourcestudystudio.asimplecache.SaveBitmapActivity" />
