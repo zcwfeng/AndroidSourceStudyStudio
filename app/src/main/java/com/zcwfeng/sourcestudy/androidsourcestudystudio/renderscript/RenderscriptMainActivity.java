@@ -90,12 +90,12 @@ public class RenderscriptMainActivity extends BaseActivity {
         /*
          * Create renderScript
          */
-        createScript();
+//        createScript();
 
         /*
          * Invoke renderScript kernel and update imageView
          */
-        updateImage(1.0f);
+//        updateImage(1.0f);
     }
 
     /*

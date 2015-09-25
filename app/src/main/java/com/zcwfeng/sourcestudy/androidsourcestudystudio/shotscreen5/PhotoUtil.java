@@ -459,7 +459,7 @@ public class PhotoUtil {
 		} catch (FileNotFoundException e) {
 			e.printStackTrace();
 			return false;
-		} catch (IOException e) {
+		} catch (Exception e) {
 			e.printStackTrace();
 			return false;
 		}
