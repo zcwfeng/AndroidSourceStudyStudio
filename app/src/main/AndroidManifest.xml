@@ -72,6 +72,7 @@
         <!-- 非注解的Activity -->
 
         <!--A Simple Cache Of Afinal-->
+        <activity android:name="com.zcwfeng.sourcestudy.androidsourcestudystudio.renderscript.RenderscriptMainActivity"></activity>
         <activity android:name="com.zcwfeng.sourcestudy.androidsourcestudystudio.asimplecache.MainActivity" />
         <activity android:name="com.zcwfeng.sourcestudy.androidsourcestudystudio.asimplecache.AboutActivity" />
         <activity android:name="com.zcwfeng.sourcestudy.androidsourcestudystudio.asimplecache.SaveBitmapActivity" />
@@ -121,6 +122,8 @@
             android:theme="@style/Theme.AppCompat"></activity>
         <activity android:name="com.zcwfeng.sourcestudy.androidsourcestudystudio.floatactionbutton.NewAndroidWidgetDemo"></activity>
         <activity android:name="com.zcwfeng.sourcestudy.androidsourcestudystudio.views.CustomViewTestActivity"/>
+
+        <activity android:name="com.soundcloud.android.crop.CropImageActivity"></activity>
         <!--begin rongcloud-->
         <activity
             android:name="io.rong.voipkit.activity.CallSideActivity"

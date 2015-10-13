@@ -2,7 +2,7 @@ apply plugin: 'com.android.application'
 apply plugin: 'android-apt'
 def AAVersion = '3.3.1'
 android {
-    compileSdkVersion 21
+    compileSdkVersion 22
     buildToolsVersion "22.0.1"
 
     defaultConfig {
@@ -11,12 +11,10 @@ android {
         versionCode 1
         versionName "1.0"
         minSdkVersion 16
-
-
         manifestPlaceholders = [ CHANNEL_NAME:"Unspecified"]
-
+        renderscriptTargetApi 18
+        renderscriptSupportModeEnabled true
     }
-
 
 
     signingConfigs {
@@ -49,22 +47,22 @@ android {
 }
 
 dependencies {
-    compile fileTree(include: ['*.jar'], dir: 'src/main/libs')
+    compile fileTree(include: ['*.jar'], dir: 'libs')
     apt "org.androidannotations:androidannotations:$AAVersion"
     compile "org.androidannotations:androidannotations-api:$AAVersion"
     compile 'com.facebook.fresco:fresco:0.6.0+'
-    compile 'com.android.support:recyclerview-v7:22.+'
     compile 'com.android.support:palette-v7:22.+'
+    compile 'com.android.support:appcompat-v7:22.2.0'
     compile 'com.github.erd:android-volley:1.0.0'
     compile project(':library')
     compile project(':mylibrary')
     compile project(':IMKit')
-    compile 'com.android.support:appcompat-v7:22.2.0'
+    compile project(':croplib')
     compile 'jp.wasabeef:recyclerview-animators:1.2.0@aar'
     compile 'com.github.navasmdc:MaterialDesign:1.5@aar'
     compile 'org.litepal.android:core:1.2.1'
     compile 'com.bugtags.library:bugtags-lib:latest.integration'
-
+//    compile files('renderscript-v8.jar')
 }
 
 
