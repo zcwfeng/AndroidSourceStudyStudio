@@ -49,7 +49,7 @@ android {
 dependencies {
     compile fileTree(include: ['*.jar'], dir: 'libs')
     apt "org.androidannotations:androidannotations:$AAVersion"
-    compile "org.androidannotations:androidannotations-api:$AAVersion"
+//    compile "org.androidannotations:androidannotations-api:$AAVersion"
     compile 'com.facebook.fresco:fresco:0.6.0+'
     compile 'com.android.support:palette-v7:22.+'
     compile 'com.android.support:appcompat-v7:22.2.0'
@@ -61,7 +61,7 @@ dependencies {
     compile 'jp.wasabeef:recyclerview-animators:1.2.0@aar'
     compile 'com.github.navasmdc:MaterialDesign:1.5@aar'
     compile 'org.litepal.android:core:1.2.1'
-    compile 'com.bugtags.library:bugtags-lib:latest.integration'
+//    compile 'com.bugtags.library:bugtags-lib:latest.integration'
 //    compile files('renderscript-v8.jar')
 }
 

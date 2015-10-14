@@ -52,7 +52,7 @@ public class MyApplication extends LitePalApplication {
         // 初始化fresco库
         Fresco.initialize(this);
         //在这里初始化
-        Bugtags.start("a9a7df7976bd7d1aab5c25bdffb48a2b", this, Bugtags.BTGInvocationEventBubble);
+//        Bugtags.start("a9a7df7976bd7d1aab5c25bdffb48a2b", this, Bugtags.BTGInvocationEventBubble);
 
         DisplayMetrics metric = getResources().getDisplayMetrics();
         WIDTH = metric.widthPixels;
