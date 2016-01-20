@@ -1,11 +1,16 @@
 package com.zcwfeng.sourcestudy.androidsourcestudystudio.activity;
 
+import android.annotation.TargetApi;
 import android.content.Intent;
 import android.database.sqlite.SQLiteDatabase;
+import android.graphics.Outline;
 import android.net.Uri;
+import android.os.Build;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.MotionEvent;
+import android.view.View;
+import android.view.ViewOutlineProvider;
 import android.widget.Button;
 
 import com.bugtags.library.Bugtags;
@@ -35,6 +40,7 @@ import org.litepal.tablemanager.Connector;
 
 //http://plugins.jetbrains.com/plugin/7369
 
+@TargetApi(Build.VERSION_CODES.LOLLIPOP)
 @EActivity(R.layout.activity_main)
 public class MainActivity extends BaseActivity {
     @ViewById(R.id.test_stick_nav_layout)
@@ -58,7 +64,22 @@ public class MainActivity extends BaseActivity {
 
 //        testLitePal();
 
+        testOutlineFabView();
+
     }
+
+    private void testOutlineFabView() {
+       View fabView = findViewById(R.id.fab_add);
+        fabView.setOutlineProvider(viewOutline);
+    }
+
+    ViewOutlineProvider viewOutline = new ViewOutlineProvider() {
+        @Override
+        public void getOutline(View view, Outline outline) {
+            int fabSize = getResources().getDimensionPixelSize(R.dimen.fab_size);
+            outline.setOval(-4,-4,fabSize,fabSize);
+        }
+    };
 
     private void testLitePal() {
         SQLiteDatabase db = Connector.getDatabase();

@@ -21,8 +21,8 @@ import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.os.AsyncTask;
 import android.os.Bundle;
-import android.support.v8.renderscript.Allocation;
-import android.support.v8.renderscript.RenderScript;
+//import android.support.v8.renderscript.Allocation;
+//import android.support.v8.renderscript.RenderScript;
 import android.widget.ImageView;
 import android.widget.SeekBar;
 import android.widget.SeekBar.OnSeekBarChangeListener;
@@ -42,9 +42,9 @@ public class RenderscriptMainActivity extends BaseActivity {
     private Bitmap[] mBitmapsOut;
     private ImageView mImageView;
 
-    private RenderScript mRS;
-    private Allocation mInAllocation;
-    private Allocation[] mOutAllocations;
+//    private RenderScript mRS;
+//    private Allocation mInAllocation;
+//    private Allocation[] mOutAllocations;
 //    private ScriptC_saturation mScript;
 
     @Override
@@ -104,14 +104,14 @@ public class RenderscriptMainActivity extends BaseActivity {
      */
     private void createScript() {
         //Initialize RS
-        mRS = RenderScript.create(this);
-
-        //Allocate buffers
-        mInAllocation = Allocation.createFromBitmap(mRS, mBitmapIn);
-        mOutAllocations = new Allocation[NUM_BITMAPS];
-        for (int i = 0; i < NUM_BITMAPS; ++i) {
-            mOutAllocations[i] = Allocation.createFromBitmap(mRS, mBitmapsOut[i]);
-        }
+//        mRS = RenderScript.create(this);
+//
+//        //Allocate buffers
+//        mInAllocation = Allocation.createFromBitmap(mRS, mBitmapIn);
+//        mOutAllocations = new Allocation[NUM_BITMAPS];
+//        for (int i = 0; i < NUM_BITMAPS; ++i) {
+//            mOutAllocations[i] = Allocation.createFromBitmap(mRS, mBitmapsOut[i]);
+//        }
 
         //Load script
 //        mScript = new ScriptC_saturation(mRS);
@@ -144,7 +144,7 @@ public class RenderscriptMainActivity extends BaseActivity {
                 /*
                  * Copy to bitmap and invalidate image view
                  */
-                mOutAllocations[index].copyTo(mBitmapsOut[index]);
+//                mOutAllocations[index].copyTo(mBitmapsOut[index]);
                 mCurrentBitmap = (mCurrentBitmap + 1) % NUM_BITMAPS;
             }
             return index;
