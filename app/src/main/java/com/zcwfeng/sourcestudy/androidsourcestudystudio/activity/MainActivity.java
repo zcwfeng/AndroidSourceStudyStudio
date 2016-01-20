@@ -223,20 +223,20 @@ public class MainActivity extends BaseActivity {
     protected void onResume() {
         super.onResume();
         //注：回调 1
-        Bugtags.onResume(this);
+//        Bugtags.onResume(this);
     }
 
     @Override
     protected void onPause() {
         super.onPause();
         //注：回调 2
-        Bugtags.onPause(this);
+//        Bugtags.onPause(this);
     }
 
     @Override
     public boolean dispatchGenericMotionEvent(MotionEvent ev) {
         //注：回调 3
-        Bugtags.onDispatchTouchEvent(this, ev);
+//        Bugtags.onDispatchTouchEvent(this, ev);
         return super.dispatchGenericMotionEvent(ev);
     }
 }
