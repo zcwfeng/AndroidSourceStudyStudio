@@ -38,7 +38,10 @@ import org.androidannotations.annotations.EActivity;
 import org.androidannotations.annotations.ViewById;
 import org.litepal.tablemanager.Connector;
 
+import java.util.Observable;
+
 //http://plugins.jetbrains.com/plugin/7369
+
 
 @TargetApi(Build.VERSION_CODES.LOLLIPOP)
 @EActivity(R.layout.activity_main)
@@ -56,7 +59,8 @@ public class MainActivity extends BaseActivity {
     @ViewById(R.id.mProgressBar)
     Button mProgressBar;
     long exitTime;//点击返回时间
-
+    @ViewById(R.id.fab_add)
+    View fabView;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -64,29 +68,28 @@ public class MainActivity extends BaseActivity {
 
 //        testLitePal();
 
-        testOutlineFabView();
-
+         ;
     }
 
     private void testOutlineFabView() {
-       View fabView = findViewById(R.id.fab_add);
-        fabView.setOutlineProvider(viewOutline);
-    }
-
-    ViewOutlineProvider viewOutline = new ViewOutlineProvider() {
+        ViewOutlineProvider viewOutline = new ViewOutlineProvider() {
         @Override
         public void getOutline(View view, Outline outline) {
             int fabSize = getResources().getDimensionPixelSize(R.dimen.fab_size);
-            outline.setOval(-4,-4,fabSize,fabSize);
+            outline.setOval(15,15,fabSize,fabSize);
         }
     };
+        fabView.setOutlineProvider(viewOutline);
+    }
+
+
 
     private void testLitePal() {
         SQLiteDatabase db = Connector.getDatabase();
     }
 
     @AfterViews
-    public void init() {
+    public void init() {testOutlineFabView();
         Uri uri = Uri.parse("https://raw.githubusercontent.com/facebook/fresco/gh-pages/static/fresco-logo.png");
         draweeView.setImageURI(uri);
         ControllerListener listener = new BaseControllerListener();
